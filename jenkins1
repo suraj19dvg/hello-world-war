@@ -10,11 +10,11 @@ pipeline {
         }
        stage ("tomcat deploy") {
         steps {
-          sh 'sudo cp -R target/hello-world-war-1.0.0.war /opt/tomcat/webapps/'
-          sh 'sudo sh /opt/tomcat/webapps/bin/shutdown.sh'
+          sh 'sudo cp -R target/hello-world-war-1.0.0.war /opt/apache-tomcat-9.0.69/webapps/'
+          sh 'sudo sh /opt/apache-tomcat-9.0.69/webapps/bin/shutdown.sh'
           sh 'sudo sleep 3'
-          sh 'sudo sh /opt/tomcat/bin/startup.sh'
-          echo "deployment is succrsfull"
+          sh 'sudo sh /opt/apache-tomcat-9.0.69/bin/startup.sh'
+          echo "deployment is successfull"
           echo "copy the public ip of instance and open it browser port:8080"
           }
         }
