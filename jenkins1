@@ -1,5 +1,5 @@
 pipeline {
-  agent {label "slave_server1"}
+  agent {label "slave"}
     stages {
       stages ("tomcat build") {
         steps {
